@@ -1,10 +1,13 @@
+console.log("obects.js loaded")
 //ADD TIMER- in quiz control
 $(document).ready(function(){
 
-    function populate(){
-        if(quiz.isEnded()) {
-            showScores();
-        }
+    //THIS IS THE PROBLEM
+    // function populate(){
+    //     if(quiz.isEnded()) {
+    //         showScores();
+    //     }
+
         //choices Struggling
         else{
             var element = document.getElementById("questions");
@@ -46,7 +49,10 @@ $(document).ready(function(){
     }
     //Show 10 questions individually
     var questions = [
-        "Which actor played James Bond in Goldeneye, Tomorrow Never Dies, The World Is Not Enough, and Die Another Day?",
+        {question: "Which actor played James Bond in Goldeneye, Tomorrow Never Dies, The World Is Not Enough, and Die Another Day?",
+        choice: ["Sean Connery","Daniel Craig","Roger Moore","Pierce Bronson"],
+        answer: "Pierce Bronson"
+    },
         "Who is the most recent actor to play James Bond?",
         "Who was the very first James Bond?",
         "What is James Bond signature car?",
